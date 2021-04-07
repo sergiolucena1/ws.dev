@@ -1,0 +1,278 @@
+
+/*
+BOX
+    largura
+    conteúdo da caixa
+
+    Espaçamento
+    Bordas
+    Preenchimento
+
+    posicionamento
+*/
+
+/*GLOBAL*/
+
+body {
+    background: #e5e5e5;
+    color: #24282b;
+
+    /* text-align: center; (alinhar os textos) */
+
+    font-family: 'Montserrat', sans-serif;
+
+    margin: 0;
+
+}
+
+.hide{
+    display: none;
+    /* sumir com o elemento */
+}
+
+a { 
+    color: #ff5e84;
+    font-weight: bold; /*negritar*/
+    text-decoration: none;
+    
+}
+
+a:hover{ /*quando passar o mouse em cima*/
+    text-decoration: underline;/*uma linha quando pssar o mouse*/
+    
+}
+
+p, .description{
+    font-size: 16px; /*tamanho da fonte*/
+    line-height:24px ; /*altura da linha*/
+    letter-spacing: 0.1px; /*espaçamento entre letras*/
+}
+
+#container{
+    /* largura */
+    width: 80%;
+    /* largura maxima */
+    max-width: 980px; 
+
+    margin:40px auto;
+    
+    /* altura =  height */
+    
+    /* coloca as caixas filhos em linha (flex) */
+    display: flex;
+
+}
+
+       /* section id= intro  */
+
+#intro{
+    width: 300px;
+    margin-right: 20px;
+}
+
+main{
+    
+    margin: 32px 0;
+   /* margin : cima direita baixo esquerda (4 elementos)*/
+   /* margin: cima/baixo e direita/esquerda(dois elementos) */
+}
+
+#buttons{
+    display: flex;
+   
+    justify-content: space-evenly; /* colocando espaço entre os botoes */   
+
+    margin-bottom: 32px;/*margem de baixo*/
+
+}
+
+button {   /* peimrieo botão*/
+    
+    background: none;
+    /* sem background; */
+
+    color: #ff5e84;
+    /* cor dos botoes */
+
+    border: none;
+    /* sem borda */
+
+    font-size: 14px;   /*tamanho da fonte*/
+    line-height: 18px;   /*altura da linha*/
+    letter-spacing: 0.2px; /*espaçamento entre letras*/
+    font-weight: bold;   /* negritar */
+    
+
+    cursor: pointer;
+    /* a setinha do cursor muda */
+
+    outline: none;
+    /* fazer algo ao clicar (nao fazer) */
+
+}
+
+button:hover { /** com o mouse em cima **/
+    text-decoration: underline;/**colocar uma linha */
+}
+
+
+button.fat {     /* segundo botão*/
+   
+    color: white;
+    background: #ff5e84;
+
+    width: 150px;/*largura*/
+    height: 40px;/*altura*/
+
+    border-radius: 6px; /*arredendar a borda do botao*/
+
+    box-shadow: 0px 8px 16px #ff5e8432; /*(eixo x, eixo y e borrado )fazendo sombra no botao*/
+
+}       
+
+button.fat:hover{        /** com o mouse em cima **/
+    text-decoration: none;/*nao aparecer nada*/
+
+}
+
+footer{ /*agrupando seletores com (,) */
+    text-align: center;
+
+    font-size: 14px;   /*tamanho da fonte*/
+    line-height: 18px;   /*altura da linha*/
+    letter-spacing: 0.2px; /*espaçamento entre letras*/
+    font-weight: 400px;   /* negritar */
+
+    color: #777;
+}
+
+footer a {
+    opacity: 0.7; /*cor mais opaca */
+}
+
+/* section id= last ideias */
+
+.idea{
+    display: flex; /*ficar um ao lado do outro*/
+
+    background-color: #fff;
+    box-shadow: 0 4px 16px -8px rgba(1, 1, 1, 0.1);
+    border-radius: 8px; /*arredondamento da borda*/
+
+    padding: 32px; /*espaçamento*/
+
+    margin-bottom: 32px; /*espaçamento inferior*/
+}
+
+.idea img{
+    width: 60px;
+    height:60px;
+
+    margin-right: 32px; /*espacamento a direita*/
+}
+
+.idea h3{
+    margin: 0%;
+}
+
+.idea p{
+    margin: 8px 0;
+    color: #777;
+}
+
+.idea .description{
+    margin: 16px 0;
+}
+
+
+/*modal*/ 
+
+#modal{
+    background: #ff5e84;
+
+    position: absolute; /*posicionamento absoluto*/
+    top: 0%;
+
+    ;
+    width: 100vw; /*largura em toda a area visível*/
+    height: 100vh; /*altura em toda a area visível*/
+
+    display: flex;  /* coloca as caixas filhos em linha (flex) */
+    /* align-items: center; alinhando itens no centro(alinha ao eixo x) */
+    justify-content: center; /*conteúdo ao meio(alinha ao eixo y)*/
+}
+
+#modal .content{
+    margin-top: 128px;
+
+    color: white;
+}
+
+#modal .content h1{
+    text-align: center;
+
+    text-transform: uppercase;/*transformando o texto(tudo em maiusculo)*/
+
+}
+
+#modal form{
+    width: 80%;
+    max-width: 800px;
+
+    margin: 0 auto;
+
+    display:grid ;
+    grid-template-columns: 1fr 1fr; /*colunas do modelo grade equilibradas(usando fracoes 1fr )*/
+
+    gap: 20px;
+}
+
+.content form div:nth-child(3),/*pega o elemento de dentro do form*/
+.content form div:nth-child(4),
+.content form div:nth-child(5){
+    grid-column: span 2;
+}
+
+form input ,
+form textarea{
+    width: 100%;
+    margin-bottom: 16px;
+
+    /* deixar o grid correto */
+    padding: 12px;  /*preenchimento*/
+    box-sizing: border-box; /*tamanho da caixa nao ultrapasse a borda*/
+
+    border-radius: 6px; /*arredondar borda*/
+    border:1px solid  rgba(141, 25, 52, 0.5);
+
+    outline: none; /*contorno*/
+
+    font-size: 16px;
+}
+
+form label{
+    font-weight: 600px;
+    line-height: 32px;
+    letter-spacing: 0.8px;
+    
+}
+
+form button{
+    background: white;
+
+    margin-top: 32px;
+
+    width: 150px;
+    height: 40px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+form button:hover{ /*quando estiver com o mouse em cima dele*/
+    background-color: #0984e3;
+    color: white;
+
+    text-decoration: none;
+}
