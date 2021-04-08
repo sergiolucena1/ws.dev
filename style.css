@@ -25,10 +25,7 @@ body {
 
 }
 
-.hide{
-    display: none;
-    /* sumir com o elemento */
-}
+
 
 a { 
     color: #ff5e84;
@@ -221,7 +218,7 @@ footer a {
 
     margin: 0 auto;
 
-    display:grid ;
+    display:grid ; /* em colunas ( inspecionar na pagina para ver melhor*/
     grid-template-columns: 1fr 1fr; /*colunas do modelo grade equilibradas(usando fracoes 1fr )*/
 
     gap: 20px;
@@ -257,6 +254,37 @@ form label{
     
 }
 
+form a{
+
+    width: 150px;
+    height: 40px;
+
+    background-color: #ffffff22;
+    color: white;
+    
+    display: flex;
+    align-items: center; /*centro do eixo x do display*/
+    justify-content: center;/*centro do eixo y do display*/
+
+    font-size: 14px;
+    font-weight: bold;
+
+    border-radius: 6px;
+
+    /*pegando do grid*/
+    align-self: end;
+
+    /* tempo que vai piscar o button */
+    transition: 400ms;
+}
+
+form a:hover{
+    background: #fff;
+    color: #ff5e84;
+
+    text-decoration: none;
+}
+
 form button{
     background: white;
 
@@ -268,6 +296,10 @@ form button{
     border-radius: 6px;
 
     cursor: pointer;
+
+    grid-column: 2; /*jogando para a coluna dois */
+
+    justify-self: end; /* vai pro final da coluna */
 }
 
 form button:hover{ /*quando estiver com o mouse em cima dele*/
@@ -275,4 +307,12 @@ form button:hover{ /*quando estiver com o mouse em cima dele*/
     color: white;
 
     text-decoration: none;
+
+    /* tempo que vai piscar o button */
+    transition: 400ms;
+}
+
+#modal.hide{ /*ocultar*/
+    display: none;
+    /* sumir com o elemento */
 }
