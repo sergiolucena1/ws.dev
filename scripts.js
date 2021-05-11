@@ -1,18 +1,18 @@
 function onOff(){
     document
-    .querySelector("#modal")
+    .querySelector("#modal") // dentro do documento procurar modal
     .classList // acessar a lista de classes 
     .toggle("hide") // alternancia 
 
-    document
+    document // tirando o scroll
     .querySelector("body")
     .classList // acessar a lista de classes 
-    .toggle("hideScroll") // alternancia (tirar e botar)
+    .toggle("hideScroll") // alternancia (tirar e botar) escondendo o scroll
 
     document // um scroll so no modal 
     .querySelector("#modal")
     .classList
-    .toggle("addScroll")
+    .toggle("addScroll") //  add o scrll
 
 }
 

@@ -50,6 +50,37 @@ p, .description{
     letter-spacing: 0.1px; /*espaçamento entre letras*/
 }
 
+.button {     /* segundo botão*/
+   
+    color: white;
+    background: #ff5e84;
+
+    width: 150px;/*largura*/
+    height: 40px;/*altura*/
+
+    border-radius: 8px; /*arredendar a borda do botao*/
+
+    font-size: 14px;
+    font-weight: border;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+
+
+    box-shadow: 0px 8px 16px #ff5e8432; /*(eixo x, eixo y e borrado )fazendo sombra no botao*/
+
+}       
+
+.button:hover{        /** com o mouse em cima **/
+    text-decoration: none;/*nao aparecer nada*/
+    background-color: #0984e3;
+
+}
+
+  /*PADRÃO*/     
+
 #container{
     /* largura */
     width: 80%;
@@ -69,7 +100,7 @@ p, .description{
 
 #intro{
     width: 300px;
-    margin-right: 20px;
+    margin-right: 64px;
 }
 
 main{
@@ -117,25 +148,6 @@ button:hover { /** com o mouse em cima **/
     text-decoration: underline;/**colocar uma linha */
 }
 
-
-button.fat {     /* segundo botão*/
-   
-    color: white;
-    background: #ff5e84;
-
-    width: 150px;/*largura*/
-    height: 40px;/*altura*/
-
-    border-radius: 6px; /*arredendar a borda do botao*/
-
-    box-shadow: 0px 8px 16px #ff5e8432; /*(eixo x, eixo y e borrado )fazendo sombra no botao*/
-
-}       
-
-button.fat:hover{        /** com o mouse em cima **/
-    text-decoration: none;/*nao aparecer nada*/
-
-}
 
 footer{ /*agrupando seletores com (,) */
     text-align: center;
@@ -206,7 +218,8 @@ footer a {
 }
 
 #modal.addScroll{
-    overflow: auto;
+    overflow: auto; 
+    /* existe scroll no modal quando for necessario */
 }
 
 #modal .content{
@@ -361,30 +374,10 @@ form button:hover{ /*quando estiver com o mouse em cima dele*/
     color: #24282b;
 }
 
-#page-ideias li:last-child a{
-    width: 150px;
-    height:40px;
-
-    background-color: #ff5e84;
+#page-ideias li a.button {
     color: white;
-
-
-    font-size: 14px;
-    font-weight: border;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-
-
 }
 
-/*Qaundo passar o mouse em cima*/
-#page-ideias li:last-child a:hover{ 
-    background-color: #0984e3;
-    text-decoration: none;
-}
 
 section#title {
     text-align: center;
